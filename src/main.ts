@@ -2,14 +2,23 @@
  * The entrypoint for the action.
  */
 import * as core from '@actions/core'
-import { getOctokit, context } from '@actions/github'
-import axios from 'axios'
+import { getOctokit } from '@actions/github'
+
+// enum PackageType {
+//   container,
+//   npm,
+//   maven,
+//   nuget,
+//   rubygems,
+//   docker
+// }
 
 async function run(): Promise<void> {
   try {
     const github_token: string =
       core.getInput('github_token') || process.env.GITHUB_TOKEN || ''
-    const package_type = core.getInput('package_type') || 'container'
+    const package_type: any =
+      core.getInput('package_type') || process.env.PACKAGE_TYPE || 'container'
 
     const organization: string =
       core.getInput('organization') || process.env.ORGANIZATION || ''
