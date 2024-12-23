@@ -1,0 +1,33 @@
+name: "maurosala/get-latest-package-tag"
+description: "Repository Scan Inside GitHub Actions."
+author: "Mauro Sala"
+inputs:
+  github_token:
+    description: "The GitHub API token."
+    required: true
+    default: ""
+  package_type:
+    description: "The package type to scan."
+    required: false
+    default: "container"
+  organization:
+    description: "The organization to scan."
+    required: false
+    default: ${{ github.repository_owner }}
+  repository:
+    description: "The repository with shared rules."
+    required: false
+    default: ${{ github.repository }}
+  ignore:
+    description: "The ignore tag list, separated by comma."
+    required: false
+    default: ""
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+
+# https://actions-cool.github.io/github-action-branding/
+branding:
+  icon: package
+  color: blue
