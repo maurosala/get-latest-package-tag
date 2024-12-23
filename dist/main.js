@@ -51,9 +51,7 @@ async function run() {
         const github_token = core.getInput('github_token') || process.env.GITHUB_TOKEN || '';
         const package_type = core.getInput('package_type') || process.env.PACKAGE_TYPE || 'container';
         const organization = core.getInput('organization') || process.env.ORGANIZATION || '';
-        const repository = core.getInput('repository') ||
-            process.env.REPOSITORY ||
-            'impact-dashboard';
+        const repository = core.getInput('repository') || process.env.REPOSITORY || '';
         const ignore = (core.getInput('ignore') || '')
             .trim()
             .split(',')
