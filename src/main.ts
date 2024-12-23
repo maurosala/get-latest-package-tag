@@ -23,9 +23,7 @@ async function run(): Promise<void> {
     const organization: string =
       core.getInput('organization') || process.env.ORGANIZATION || ''
     const repository: string =
-      core.getInput('repository') ||
-      process.env.REPOSITORY ||
-      'impact-dashboard'
+      core.getInput('repository') || process.env.REPOSITORY || ''
     const ignore: string[] = (core.getInput('ignore') || '')
       .trim()
       .split(',')
