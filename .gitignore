@@ -7,4 +7,3 @@
 .DS_Store
 .env
 yarn.lock
-dist
