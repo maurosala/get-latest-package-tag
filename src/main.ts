@@ -61,6 +61,7 @@ async function run(): Promise<void> {
             }
           }
 
+          core.info(`Found tag: ${tag}`)
           core.setOutput('tag', tag)
         }
       })
