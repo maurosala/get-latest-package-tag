@@ -1,6 +1,6 @@
 {
   "name": "@maurosala/get-latest-package-tag",
-  "version": "VERSION",
+  "version": "1.0.4",
   "description": "GitHub Action for retrieve the last package tag",
   "main": "dist/index.js",
   "scripts": {
